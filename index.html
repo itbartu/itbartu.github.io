@@ -94,7 +94,7 @@ img {
 
 audio {
     position: absolute;
-    top: 0px;
+    bottom: 0px;
     right: 0px;
 
 }
@@ -108,6 +108,7 @@ audio {
     position: absolute;
     top: 0px;
     right: 0px;
+	margin-top: 1em;
 
 }
 
@@ -253,10 +254,18 @@ audio {
 
 
     <!-- BACKGROUND MUSIC -->
-<p id="foobar"><audio id="foobar" loop id="foobar" src="0.mp3" type="audio/mpeg"></p>
+<audio id="foobar" loop id="foobar" src="0.mp3" type="audio/mpeg"></audio>
 
 
 <div class="music-player">
+
+		<!-- Play -->
+			<li><button id="play-btn" onclick="playVid()">ܟܵܫܸܠ</button></li>
+			<li><p> - </p></li>
+			
+		<!-- Pause -->	
+			<li><button id="play-btn" onclick="pauseVid()">ܦܵܠܫܬܵܐ</button></li>
+			<li><p> - </p></li>
 			
 		<!-- Shuffle -->
 			<li><button id="shuffle-btn" onclick="random()">ܚܲܪܒܘܼܫܸܐ</button></li>
@@ -277,19 +286,25 @@ audio {
 
 <script type="text/javascript">
 function random(){
-document.getElementById("foobar").innerHTML = '<audio autoplay loop id="foobar" src=' + Math.floor(Math.random()* 3) + '.mp3 type="audio/mpeg">';
+var vid = document.getElementById("foobar");
+var n = Math.floor(Math.random()* 3);
+vid.src = n + '.mp3';
+vid.load();
+vid.volume = 0.25;
+vid.play();
 }
 
 </script>
 
 <script type="text/javascript">
-var song = document.getElementById("foobar");
-function shuffle() {
-if (song.paused) {
-  song.play();
-} else {
-  song.pause();
+var vid = document.getElementById("foobar");
+function playVid() {
+    vid.play();
+    vid.volume = 0.25;
 }
+function pauseVid() {
+    vid.pause();
+    vid.volume = 0.25;
 }
 </script> 
 
