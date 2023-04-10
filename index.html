@@ -94,10 +94,60 @@ img {
 
 audio {
     position: absolute;
-    bottom: 0px;
+    top: 0px;
     right: 0px;
 
 }
+
+.music-player {
+	list-style: none;
+	display: flex;
+	align-items: center;	
+	margin-right: 3em;
+	font-size: 16px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+}
+
+.music-player li {
+	background-color: transparent;
+	margin-right: 0.5em;
+	font-size: 16px;
+	color: white;
+
+}
+
+.music-player button {
+	background-color: transparent;
+	border: none;
+	color: white;
+	padding: 0;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.music-player button:hover {
+	text-decoration: underline;
+	color: white;
+	background-color: grey;
+}
+
+.donate {
+	color: white;
+	font-size: 14px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+	margin-right: 1em;
+}
+
+
 </style>
 
 
@@ -198,26 +248,55 @@ audio {
 		</section>
 </div>	
 
+
 <img src="hanekawawithflag.png" alt="patriot anime girl">
 
 
     <!-- BACKGROUND MUSIC -->
-<p id="foobar"> </p>
+<p id="foobar"><audio id="foobar" loop id="foobar" src="0.mp3" type="audio/mpeg"></p>
 
-	</main>
 
+<div class="music-player">
+			
+		<!-- Shuffle -->
+			<li><button id="shuffle-btn" onclick="random()">ܚܲܪܒܘܼܫܸܐ</button></li>
+
+
+
+</div>
+
+
+    <!-- DONATION -->
+<div class="donate">	
+<p>ETH: 0x8BC188b58067d99192d8eC0c2fb2C3A60E406083</p>
+
+</div>
+
+</main>
 </body>
 
 <script type="text/javascript">
 function random(){
 document.getElementById("foobar").innerHTML = '<audio autoplay loop id="foobar" src=' + Math.floor(Math.random()* 3) + '.mp3 type="audio/mpeg">';
 }
+
 </script>
+
+<script type="text/javascript">
+var song = document.getElementById("foobar");
+function shuffle() {
+if (song.paused) {
+  song.play();
+} else {
+  song.pause();
+}
+}
+</script> 
 
 <script type="text/javascript"> 
 ChangeIt();
 random();
+</script>
 
-</script> 
 
 </html>
