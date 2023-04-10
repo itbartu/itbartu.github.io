@@ -148,7 +148,9 @@ audio {
 	margin-right: 1em;
 }
 
-
+.hide {
+    display:none;
+}
 </style>
 
 
@@ -259,12 +261,9 @@ audio {
 
 <div class="music-player">
 
-		<!-- Play -->
-			<li><button id="play-btn" onclick="playVid()">ܟܵܫܸܠ</button></li>
-			<li><p> - </p></li>
-			
-		<!-- Pause -->	
-			<li><button id="play-btn" onclick="pauseVid()">ܦܵܠܫܬܵܐ</button></li>
+		<!-- Pause/Play -->
+			<li><button id="pause-btn" onclick="togglePlay()">ܒܸܗܠܵܐ</button></li>
+			<li><button id="play-btn" onclick="togglePlay()">ܟܵܫܸܠ</button></li>
 			<li><p> - </p></li>
 			
 		<!-- Shuffle -->
@@ -298,14 +297,24 @@ vid.play();
 
 <script type="text/javascript">
 var vid = document.getElementById("foobar");
-function playVid() {
-    vid.play();
-    vid.volume = 0.25;
-}
-function pauseVid() {
-    vid.pause();
-    vid.volume = 0.25;
-}
+var isPlaying = true;
+document.getElementById("play-btn").style.display="none";
+
+function togglePlay() {
+  isPlaying ? vid.pause() : vid.play();
+};
+
+vid.onplaying = function() {
+  isPlaying = true;
+  document.getElementById("pause-btn").style.display="block";
+  document.getElementById("play-btn").style.display="none";
+};
+vid.onpause = function() {
+  isPlaying = false;
+  document.getElementById("play-btn").style.display="block";
+  document.getElementById("pause-btn").style.display="none";
+};
+
 </script> 
 
 <script type="text/javascript"> 
