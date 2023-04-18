@@ -70,7 +70,78 @@
 		.link:hover {
 			color: white;
 			background-color: grey;
-		}		
+		}	
+
+		.container {
+			margin: 0 auto;
+			width: 100%;
+			text-align: center;
+		}
+
+		ul {
+			color: white;
+			margin-right: 1em;
+			font-size: 12px;
+			font-variant: small-caps;
+			font-family: Helvetica;
+			text-align: left;
+			padding-top: 1%;
+			display: inline-block;
+		}
+		
+			a:active, a:visited {
+			color: white;
+		}	
+	
+			a:hover {
+			color: white;
+			background-color: grey;
+		}
+
+.music-player {
+	list-style: none;
+	display: flex;
+	align-items: center;	
+	margin-right: 3em;
+	font-size: 16px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+	margin-top: 1em;
+
+}
+
+.music-player li {
+	background-color: transparent;
+	margin-right: 0.5em;
+	font-size: 16px;
+	color: white;
+
+}
+
+.music-player button {
+	background-color: transparent;
+	border: none;
+	color: white;
+	padding: 0;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.music-player button:hover {
+	text-decoration: underline;
+	color: white;
+	background-color: grey;
+}
+
+.hide {
+    display:none;
+}
+
 	</style>
 </head>
 <div class="header">
@@ -79,8 +150,85 @@
 
 
 <body>
-	<h2 class="header2">Broadcast Aššur</h2>
-	<p class="subtitle">Assyrian resistance broadcasting from the deepest tropics of New Assyria܀</p>
+<h2 class="header2">Broadcast Aššur</h2>
+<p class="subtitle">Assyrian resistance broadcasting from the deepest tropics of New Assyria܀</p>
+
+<!-- Blogset 1 -->	
+<!-- 8 blogs per blog set -->	
+<div class="container">
+<ul>
+  <li><a href="" target="_blank" rel="noopener noreferrer">Assimilation</a></li>
+  <li><a href="" target="_blank" rel="noopener noreferrer">Assimilation pt.2</a></li>
+  <li><a href="" target="_blank" rel="noopener noreferrer">Gods plan for Assyria</a></li>
+  <li><a href="" target="_blank" rel="noopener noreferrer">Opsec and International Travel</a></li>
+  <li><a href="" target="_blank" rel="noopener noreferrer">Operation Asgard</a></li>
+  <li><a href="" target="_blank" rel="noopener noreferrer">The Assyrian Situation</a></li>
+  <li><a href="" target="_blank" rel="noopener noreferrer">The future of Zowaa</a></li>
+  <li><a href="" target="_blank" rel="noopener noreferrer">Exposing the API</a></li>
+</ul>
+
+<ul>
+  <li><a href="" target="_blank" rel="noopener noreferrer">Assyrian networking guide</a></li>
+  <li><a href="" target="_blank" rel="noopener noreferrer">Guide for Iraqi citizenship</a></li>
+  <li><a href="" target="_blank" rel="noopener noreferrer">History of Tel Keppe</a></li>
+  <li><a href="" target="_blank" rel="noopener noreferrer">Centralization of the New Assyria</a></li>
+  <li><a href="" target="_blank" rel="noopener noreferrer">The Nestorian Empire</a></li>
+  <li><a href="" target="_blank" rel="noopener noreferrer">Who was Muhhamad</a></li>
+  <li><a href="" target="_blank" rel="noopener noreferrer">A conspiracy against the Assyrian identity</a></li>
+  <li><a href="" target="_blank" rel="noopener noreferrer">Balkanization</a></li>
+</ul>
+</div>
+
+    <!-- BACKGROUND MUSIC -->
+<audio id="foobar" autoplay loop id="foobar" src="broadcast.mp3" type="audio/mpeg"></audio>
+
+
+<div class="music-player">
+
+		<!-- Pause/Play -->
+			<li><button id="pause-btn" onclick="togglePlay()">ܒܸܗܠܵܐ</button></li>
+			<li><button id="play-btn" onclick="togglePlay()">ܟܵܫܸܠ</button></li>
+			
+
+
+
+</div>
+
 </body>
+
+<script type="text/javascript">
+function vidstart(){
+var vid = document.getElementById("foobar");
+vid.load();
+vid.play();
+}
+
+</script>
+
+<script type="text/javascript">
+var vid = document.getElementById("foobar");
+var isPlaying = true;
+document.getElementById("play-btn").style.display="none";
+
+function togglePlay() {
+  isPlaying ? vid.pause() : vid.play();
+};
+
+vid.onplaying = function() {
+  isPlaying = true;
+  document.getElementById("pause-btn").style.display="block";
+  document.getElementById("play-btn").style.display="none";
+};
+vid.onpause = function() {
+  isPlaying = false;
+  document.getElementById("play-btn").style.display="block";
+  document.getElementById("pause-btn").style.display="none";
+};
+
+</script> 
+
+<script type="text/javascript">
+vidstart();
+</script>
 
 </html>
