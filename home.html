@@ -151,11 +151,27 @@ audio {
 .hide {
     display:none;
 }
+
+.homelink {
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+
+}
+
+.homelink:active, a:visited {
+	color: white;
+}	
+
+.homelink:hover {
+	color: white;
+	background-color: transparent;
+}	
 </style>
 
 
 <div class="header">
-  <h1>[itbartu]</h1>
+  <h1><a class="homelink" href="home.html">[itbartu]</a></h1>
 </div>
 
 <main>
@@ -166,7 +182,7 @@ audio {
 		<ul>	
 		<div class="header2">
 		<section id="literature">
-			<h2>ܟܵܬܘܿܒ݂ܘܼܬܵܐ</h2>
+			<h2>ܟܵܬܘܿܒ݂ܘܼܬܵܐ</a></h2>
 		</div>
 		</ul>
 		</nav>
@@ -321,5 +337,6 @@ vid.onpause = function() {
 ChangeIt();
 random();
 </script>
+
 
 </html>
