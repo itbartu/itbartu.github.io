@@ -33,7 +33,63 @@
     .logos { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; justify-items: center; align-items: center; margin-top: 30px; }
     .logos img { width: 100%; max-width: 120px; height: auto; }
     .bottom-img img { width: 100%; height: auto; display: block; }
-    @media (max-width: 900px) { .join { flex-direction: column; } }
+@media (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  form input, form select, form textarea, form button {
+    font-size: 16px;
+  }
+
+  .join {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  header {
+    height: 60vh;
+    background-size: cover;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .faq-item {
+    font-size: 18px;
+  }
+
+  .faq-question::after {
+    font-size: 24px;
+  }
+
+  .contact-box {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .lang-switcher {
+    font-size: 16px;
+    padding: 4px 8px;
+  }
+}
   </style>
 </head>
 <body>
