@@ -9,106 +9,66 @@
     html { scroll-behavior: smooth; }
     body { margin: 0; font-family: "Segoe UI", Helvetica, Arial, sans-serif; background: #fff; color: #000; font-size: 25px; }
     header { background: url('assets/AMA.jpg') center/cover no-repeat; height: 100vh; color: white; position: relative; }
-    nav { position: absolute; top: 20px; left: 40px; right: 40px; display: flex; justify-content: space-between; align-items: center; z-index: 2; font-size: 28px; font-weight: 700; }
+    nav { position: absolute; top: 20px; left: 20px; right: 20px; display: flex; justify-content: space-between; align-items: center; z-index: 2; font-size: 28px; font-weight: 700; flex-wrap: nowrap; }
     .brand { font-size: 30px; color: white; font-weight: 700; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); }
-    .nav-links { display: flex; gap: 40px; align-items: center; }
+    .nav-links { display: flex; gap: 30px; align-items: center; flex-wrap: nowrap; }
     .nav-links a { color: white; text-decoration: none; transition: color 0.3s ease; font-weight: 700; }
-    .nav-links a:hover { color: #636161; text-shadow: 0 0 3px rgba(255,255,255,0.5); }
-    .lang-switcher { cursor: pointer; padding: 6px 12px; background: white; color: black; border-radius: 5px; font-size: 20px; display: inline-flex; align-items: center; height: auto; }
+    .nav-links a:hover { color: #ccc; text-shadow: 0 0 3px rgba(255,255,255,0.5); }
+    .lang-switcher { cursor: pointer; padding: 6px 12px; background: white; color: black; border-radius: 5px; font-size: 20px; }
+
     section { padding: 80px 5%; max-width: 1600px; margin: auto; }
     h2 { border-bottom: 2px solid #000; display: inline-block; margin-bottom: 30px; font-size: 32px; }
+
     .faq { background: black; color: white; padding: 60px 5%; margin-top: 50px; }
     .faq-item { margin-bottom: 30px; cursor: pointer; font-size: 22px; }
     .faq-question { font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
     .faq-answer { display: none; padding-top: 10px; font-weight: normal; font-size: 20px; }
     .faq-question::after { content: '+'; font-size: 28px; padding-left: 10px; }
     .faq-question.open::after { content: '-'; }
+
     .join { display: flex; gap: 40px; justify-content: space-between; align-items: flex-start; margin-top: 50px; flex-wrap: wrap; }
     form { display: flex; flex-direction: column; gap: 15px; flex: 1 1 60%; min-width: 350px; }
     input, select, textarea { padding: 12px; font-size: 18px; }
     button { padding: 12px; font-size: 18px; background: black; color: white; border: none; cursor: pointer; }
     button:hover { background: #333; }
+
     .contact-right { display: flex; flex-direction: column; gap: 20px; flex: 1 1 35%; min-width: 300px; }
     .contact-box { background: black; color: white; padding: 25px; }
-    .logos { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; justify-items: center; align-items: center; margin-top: 30px; }
-    .logos img { width: 100%; max-width: 120px; height: auto; }
     .bottom-img img { width: 100%; height: auto; display: block; }
 
+    .logos { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; justify-items: center; align-items: center; margin-top: 30px; }
+    .logos img { width: 100%; max-width: 120px; height: auto; }
+
     @media (max-width: 900px) {
-      .join { flex-direction: column; }
+      nav { font-size: 16px; gap: 5px; flex-wrap: nowrap; }
+      .nav-links { gap: 10px; flex-wrap: nowrap; }
+      .nav-links a { font-size: 14px; }
+      .lang-switcher { font-size: 14px; padding: 4px 8px; }
+      .join { flex-direction: column; gap: 30px; }
+      form { width: 100%; min-width: unset; }
+      form input, form select, form textarea, form button { font-size: 16px; width: 100%; box-sizing: border-box; }
+      .logos { grid-template-columns: repeat(2, 1fr); }
+      .logos img:last-child { grid-column: span 2; justify-self: center; }
+      .contact-right { width: 100%; flex: unset; }
+      .contact-box { width: 100%; }
+      .bottom-img img { width: 100%; }
     }
-
-@media (max-width: 600px) {
-  body { font-size: 18px; }
-  header { height: 50vh; background-size: cover; }
-
-  nav {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 20px;
-    font-size: 18px;
-  }
-  .nav-links {
-    gap: 15px;
-  }
-  .nav-links a {
-    font-size: 16px;
-  }
-  .lang-switcher {
-    font-size: 14px;
-    padding: 4px 8px;
-  }
-
-  h2 { font-size: 22px; }
-  .faq-item { font-size: 18px; }
-
-  form {
-    min-width: auto;
-    width: 100%;
-  }
-  form input, form select, form textarea, form button {
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .logos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-  .logos img:last-child {
-    grid-column: span 2;
-    justify-self: center;
-  }
-  .contact-right {
-    flex: 1 1 100%;
-    width: 100%;
-    align-items: flex-start;
-  }
-
-  .contact-box {
-    width: 100%;
-  }
-
-  .bottom-img img {
-    width: 100%;
-  }
-}
   </style>
 </head>
+
 <body>
 
-  <header>
-    <nav>
-      <div class="brand">ASSYRIAN MILITARY ASSOCIATION</div>
-      <div class="nav-links">
-        <a href="#about" data-en="ABOUT US" data-ar="عنا">ABOUT US</a>
-        <a href="#faq" data-en="FAQ" data-ar="أسئلة متكررة">FAQ</a>
-        <a href="#join" data-en="JOIN" data-ar="انضم">JOIN</a>
-        <span class="lang-switcher" onclick="toggleLanguage()">AR</span>
-      </div>
-    </nav>
-  </header>
+<header>
+  <nav>
+    <div class="brand">ASSYRIAN MILITARY ASSOCIATION</div>
+    <div class="nav-links">
+      <a href="#about" data-en="ABOUT US" data-ar="عنا">ABOUT US</a>
+      <a href="#faq" data-en="FAQ" data-ar="أسئلة متكررة">FAQ</a>
+      <a href="#join" data-en="JOIN" data-ar="انضم">JOIN</a>
+      <span class="lang-switcher" onclick="toggleLanguage()">AR</span>
+    </div>
+  </nav>
+</header>
 
   <section id="about">
     <h2 data-en="ABOUT US" data-ar="عنا">ABOUT US</h2>
@@ -140,85 +100,72 @@
   </section>
 
   <section id="join">
-    <h2 data-en="JOIN NOW" data-ar="انضم الآن">JOIN NOW</h2>
-    <div class="join">
+  <h2 data-en="JOIN NOW" data-ar="انضم الآن">JOIN NOW</h2>
+  <div class="join">
     <form action="https://formspree.io/f/xzzgkgkr" method="POST">
-  <h3 data-en="APPLICATION FORM" data-ar="نموذج التسجيل">APPLICATION FORM</h3>
+      <h3 data-en="APPLICATION FORM" data-ar="نموذج التسجيل">APPLICATION FORM</h3>
 
-  <input type="text" name="First Name" placeholder="First name" data-en="First name" data-ar="الاسم الأول" required>
-  <input type="text" name="Last Name" placeholder="Last name" data-en="Last name" data-ar="اسم العائلة" required>
-  <input type="date" name="Date of Birth" id="dob" required>
-  <input type="email" name="Email" placeholder="Your email" data-en="Your email" data-ar="بريدك الإلكتروني" required>
+      <input type="text" name="First Name" placeholder="First name" data-en="First name" data-ar="الاسم الأول" required>
+      <input type="text" name="Last Name" placeholder="Last name" data-en="Last name" data-ar="اسم العائلة" required>
+      <input type="date" name="Date of Birth" id="dob" placeholder="Date of Birth" required>
+      <input type="email" name="Email" placeholder="Your email" data-en="Your email" data-ar="بريدك الإلكتروني" required>
+      <input type="tel" name="Phone Number" placeholder="Phone number (include country code)" data-en="Phone number (include country code)" data-ar="رقم الهاتف (مع رمز الدولة)" required oninput="this.value = this.value.replace(/[^0-9+ ]/g, '')">
+      <select name="Messenger App" required>
+        <option value="" disabled selected data-en="Preferred messenger app" data-ar="تطبيق المراسلة المفضل">Preferred messenger app</option>
+        <option data-en="WhatsApp" data-ar="واتساب">WhatsApp</option>
+        <option data-en="Signal" data-ar="سيجنال">Signal</option>
+        <option data-en="Telegram" data-ar="تيليجرام">Telegram</option>
+      </select>
+      <textarea name="Military Experience" placeholder="Detail your military experience" data-en="Detail your military experience" data-ar="تفاصيل خبرتك العسكرية" required></textarea>
+      <button type="submit" data-en="SUBMIT" data-ar="إرسال">SUBMIT</button>
+    </form>
 
-  <div style="display: flex; gap: 10px;">
-    <input type="text" name="Country Code" placeholder="Country Code" data-en="Country Code" data-ar="رمز الدولة" style="flex: 1;" required>
-    <input type="tel" name="Phone Number" placeholder="Phone number" data-en="Phone number" data-ar="رقم الهاتف" style="flex: 3;" required>
-  </div>
-
-  <select name="Messenger App" required>
-    <option value="" disabled selected data-en="Preferred messenger app" data-ar="تطبيق المراسلة المفضل">Preferred messenger app</option>
-    <option data-en="WhatsApp" data-ar="واتساب">WhatsApp</option>
-    <option data-en="Signal" data-ar="سيجنال">Signal</option>
-    <option data-en="Telegram" data-ar="تيليجرام">Telegram</option>
-  </select>
-
-  <textarea name="Military Experience" placeholder="Detail your military experience" data-en="Detail your military experience" data-ar="تفاصيل خبرتك العسكرية" required></textarea>
-
-  <button type="submit" data-en="SUBMIT" data-ar="إرسال">SUBMIT</button>
-</form>
-
-
-      <div class="contact-right">
-        <div class="contact-box">
-          <h3 data-en="CONTACT US" data-ar="اتصل بنا">CONTACT US</h3>
-          <p><strong><span data-en="EMAIL:" data-ar="البريد الإلكتروني:">EMAIL:</span></strong><br>info@assyrianmilitaryassociation.org</p>
-          <p><strong><span data-en="TELEGRAM:" data-ar="تيليجرام:">TELEGRAM:</span></strong><br>t.me/AssyrianMilitaryAssociation</p>
-          <p><strong><span data-en="FACEBOOK:" data-ar="فيسبوك:">FACEBOOK:</span></strong><br>www.facebook.com/AssyrianMilitaryAssociation</p>
-        </div>
-        <div class="bottom-img">
-          <img src="assets/contact-soldiers.jpg" alt="Contact Soldiers Group">
-        </div>
+    <div class="contact-right">
+      <div class="contact-box">
+        <h3 data-en="CONTACT US" data-ar="اتصل بنا">CONTACT US</h3>
+        <p><strong><span data-en="EMAIL:" data-ar="البريد الإلكتروني:">EMAIL:</span></strong><br>info@assyrianmilitaryassociation.org</p>
+        <p><strong><span data-en="TELEGRAM:" data-ar="تيليجرام:">TELEGRAM:</span></strong><br>t.me/AssyrianMilitaryAssociation</p>
+        <p><strong><span data-en="FACEBOOK:" data-ar="فيسبوك:">FACEBOOK:</span></strong><br>www.facebook.com/AssyrianMilitaryAssociation</p>
+      </div>
+      <div class="bottom-img">
+        <img src="assets/contact-soldiers.jpg" alt="Contact Soldiers Group">
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 <script>
-    let isArabic = false;
+let isArabic = false;
 
-    window.addEventListener('DOMContentLoaded', () => {
-      const dob = document.getElementById('dob');
-      dob.max = new Date().toISOString().split('T')[0];
+window.addEventListener('DOMContentLoaded', () => {
+  const dob = document.getElementById('dob');
+  dob.max = new Date().toISOString().split('T')[0];
+});
 
-      const phoneInput = document.querySelector('input[placeholder="Phone number"]');
-      phoneInput.addEventListener('input', function() {
-        this.value = this.value.replace(/[^0-9\s]/g, '');
-      });
-    });
+function toggleLanguage() {
+  isArabic = !isArabic;
+  document.documentElement.lang = isArabic ? 'ar' : 'en';
+  document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
 
-    function toggleLanguage() {
-      isArabic = !isArabic;
-      document.documentElement.lang = isArabic ? 'ar' : 'en';
-      document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
-
-      document.querySelectorAll('[data-en]').forEach(el => {
-        if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
-          el.placeholder = isArabic ? el.getAttribute('data-ar') : el.getAttribute('data-en');
-        } else if (el.tagName === "OPTION") {
-          el.textContent = isArabic ? el.getAttribute('data-ar') : el.getAttribute('data-en');
-        } else {
-          el.textContent = isArabic ? el.getAttribute('data-ar') : el.getAttribute('data-en');
-        }
-      });
-
-      document.querySelector('.lang-switcher').textContent = isArabic ? 'EN' : 'AR';
+  document.querySelectorAll('[data-en]').forEach(el => {
+    if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+      el.placeholder = isArabic ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+    } else if (el.tagName === "OPTION") {
+      el.textContent = isArabic ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+    } else {
+      el.textContent = isArabic ? el.getAttribute('data-ar') : el.getAttribute('data-en');
     }
+  });
 
-    function toggleFaq(element) {
-      const answer = element.nextElementSibling;
-      const isOpen = element.classList.toggle('open');
-      answer.style.display = isOpen ? 'block' : 'none';
-    }
-  </script>
+  document.querySelector('.lang-switcher').textContent = isArabic ? 'EN' : 'AR';
+}
+
+function toggleFaq(element) {
+  const answer = element.nextElementSibling;
+  const isOpen = element.classList.toggle('open');
+  answer.style.display = isOpen ? 'block' : 'none';
+}
+</script>
 
 </body>
 </html>
