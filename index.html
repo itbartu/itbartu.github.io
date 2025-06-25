@@ -38,18 +38,46 @@
       .join { flex-direction: column; }
     }
 
-    @media (max-width: 600px) {
-      body { font-size: 18px; }
-      header { height: 50vh; background-size: cover; }
-      nav { flex-direction: column; align-items: center; gap: 10px; }
-      .nav-links { flex-direction: column; gap: 10px; align-items: center; }
-      .lang-switcher { font-size: 16px; padding: 4px 8px; }
-      h2 { font-size: 22px; }
-      .faq-item { font-size: 18px; }
-      form input, form select, form textarea, form button { font-size: 16px; }
-      .contact-box { font-size: 16px; padding: 15px; }
-      .logos { grid-template-columns: repeat(2, 1fr); }
-    }
+@media (max-width: 600px) {
+  body { font-size: 18px; }
+  header { height: 50vh; background-size: cover; }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  .lang-switcher { font-size: 16px; padding: 4px 8px; }
+
+  h2 { font-size: 22px; }
+  .faq-item { font-size: 18px; }
+
+  form {
+    min-width: auto;
+    width: 100%;
+  }
+  form input, form select, form textarea, form button {
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .logos img:last-child {
+    grid-column: span 2;
+    justify-self: center;
+  }
+  .contact-box { font-size: 16px; padding: 15px; }
+}
   </style>
 </head>
 <body>
@@ -129,7 +157,7 @@
           <h3 data-en="CONTACT US" data-ar="اتصل بنا">CONTACT US</h3>
           <p><strong><span data-en="EMAIL:" data-ar="البريد الإلكتروني:">EMAIL:</span></strong><br>info@assyrianmilitaryassociation.org</p>
           <p><strong><span data-en="TELEGRAM:" data-ar="تيليجرام:">TELEGRAM:</span></strong><br>t.me/AssyrianMilitaryAssociation</p>
-          <p><strong><span data-en="FACEBOOK:" data-ar="فيسبوك:">FACEBOOK:</span></strong><br>https://www.facebook.com/AssyrianMilitaryAssociation/</p>
+          <p><strong><span data-en="FACEBOOK:" data-ar="فيسبوك:">FACEBOOK:</span></strong><br>www.facebook.com/AssyrianMilitaryAssociation/</p>
         </div>
         <div class="bottom-img">
           <img src="assets/contact-soldiers.jpg" alt="Contact Soldiers Group">
