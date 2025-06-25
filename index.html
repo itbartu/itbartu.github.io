@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assyrian Military Association</title>
+  <link rel="icon" type="image/x-icon" href="assets/assyria.ico">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: "Segoe UI", Helvetica, Arial, sans-serif; background: #fff; color: #000; font-size: 25px; }
+    header { background: url('assets/AMA.jpg') center/cover no-repeat; height: 100vh; color: white; position: relative; }
+    nav { position: absolute; top: 20px; left: 40px; right: 40px; display: flex; justify-content: space-between; align-items: center; z-index: 2; font-size: 28px; font-weight: 700; }
+    .brand { font-size: 30px; color: white; font-weight: 700; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); }
+    .nav-links { display: flex; gap: 40px; align-items: center; }
+    .nav-links a { color: white; text-decoration: none; transition: color 0.3s ease; font-weight: 700; }
+    .nav-links a:hover { color: #636161; text-shadow: 0 0 3px rgba(255,255,255,0.5); }
+    .lang-switcher { cursor: pointer; padding: 6px 12px; background: white; color: black; border-radius: 5px; font-size: 20px; display: inline-flex; align-items: center; height: auto; }
+    section { padding: 80px 5%; max-width: 1600px; margin: auto; }
+    h2 { border-bottom: 2px solid #000; display: inline-block; margin-bottom: 30px; font-size: 32px; }
+    .faq { background: black; color: white; padding: 60px 5%; margin-top: 50px; }
+    .faq-item { margin-bottom: 30px; cursor: pointer; font-size: 22px; }
+    .faq-question { font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { display: none; padding-top: 10px; font-weight: normal; font-size: 20px; }
+    .faq-question::after { content: '+'; font-size: 28px; padding-left: 10px; }
+    .faq-question.open::after { content: '-'; }
+    .join { display: flex; gap: 40px; justify-content: space-between; align-items: flex-start; margin-top: 50px; flex-wrap: wrap; }
+    form { display: flex; flex-direction: column; gap: 15px; flex: 1 1 60%; min-width: 350px; }
+    input, select, textarea { padding: 12px; font-size: 18px; }
+    button { padding: 12px; font-size: 18px; background: black; color: white; border: none; cursor: pointer; }
+    button:hover { background: #333; }
+    .contact-right { display: flex; flex-direction: column; gap: 20px; flex: 1 1 35%; min-width: 300px; }
+    .contact-box { background: black; color: white; padding: 25px; }
+    .logos { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; justify-items: center; align-items: center; margin-top: 30px; }
+    .logos img { width: 100%; max-width: 120px; height: auto; }
+    .bottom-img img { width: 100%; height: auto; display: block; }
+    @media (max-width: 900px) { .join { flex-direction: column; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="brand">ASSYRIAN MILITARY ASSOCIATION</div>
+      <div class="nav-links">
+        <a href="#about" data-en="ABOUT US" data-ar="عنا">ABOUT US</a>
+        <a href="#faq" data-en="FAQ" data-ar="أسئلة متكررة">FAQ</a>
+        <a href="#join" data-en="JOIN" data-ar="انضم">JOIN</a>
+        <span class="lang-switcher" onclick="toggleLanguage()">AR</span>
+      </div>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2 data-en="ABOUT US" data-ar="عنا">ABOUT US</h2>
+    <p data-en="We exist to bring together Assyrians who are serving and who have served armed forces worldwide. Our Assyrian ancestors were among the first to form a fully professional standing army, and being of such heritage, we Assyrians have no right to a dishonourable action. By honouring the legacy of our Assyrian military history, from past to present, from Tiglath-Pileser III to Agha Petros, we honour ourselves and forge a community of militant zeal that is willing to serve one another as family, and serve our Assyrians as patriots. The Assyrian Military Association is proud to currently have members affiliated with the Nineveh Plain Guard Forces, the British Armed Forces, the Canadian Army, the Australian Defense Force and French Armed Forces. We welcome you to join our community and grow close to your Assyrian brothers in arms, not just for the interests of ourselves, but for the interests of our greater Assyria." data-ar="نحن موجودون لجمع الآشوريين الذين يخدمون والذين خدموا في القوات المسلحة في جميع أنحاء العالم. كان أسلافنا الآشوريون من بين الأوائل الذين شكلوا جيشًا نظاميًا محترفًا بالكامل، وكوننا من هذا التراث، فلا يحق لنا نحن الآشوريين أن نتعرض لعمل مشين. من خلال تكريم إرث تاريخنا العسكري الآشوري، من الماضي إلى الحاضر، من تغلث فلاصر الثالث إلى آغا بطرس، فإننا نكرم أنفسنا ونشكل مجتمعًا من الحماس العسكري المستعد لخدمة بعضهم البعض كعائلة، وخدمة الآشوريين كوطنيين. تفخر الجمعية العسكرية الآشورية بوجود أعضاء حاليًا تابعين لقوات حرس سهل نينوى، والقوات المسلحة البريطانية، والجيش الكندي، وقوات الدفاع الأسترالية، والقوات المسلحة الفرنسية. نرحب بكم للانضمام إلى مجتمعنا والتقارب مع إخوانكم الآشوريين في السلاح، ليس فقط من أجل مصلحتنا، بل من أجل مصلحة بلادنا الكبرى.">We exist to bring together Assyrians who are serving and who have served armed forces worldwide. Our Assyrian ancestors were among the first to form a fully professional standing army, and being of such heritage, we Assyrians have no right to a dishonourable action. By honouring the legacy of our Assyrian military history, from past to present, from Tiglath-Pileser III to Agha Petros, we honour ourselves and forge a community of militant zeal that is willing to serve one another as family, and serve our Assyrians as patriots. The Assyrian Military Association is proud to currently have members affiliated with the Nineveh Plain Guard Forces, the British Armed Forces, the Canadian Army, the Australian Defense Force and French Armed Forces. We welcome you to join our community and grow close to your Assyrian brothers in arms, not just for the interests of ourselves, but for the interests of our greater Assyria.</p>
+    <br>
+    <div class="logos">
+      <img src="assets/npgf.jpeg" alt="Nineveh Plain Guard Forces">
+      <img src="assets/uk.webp" alt="British Army">
+      <img src="assets/canada.png" alt="Canadian Army">
+      <img src="assets/australia.png" alt="Australian Defence Force">
+      <img src="assets/france.svg" alt="French Army">
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-en="FAQ" data-ar="أسئلة متكررة">FAQ</h2>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)" data-en="1. Do I need to be active duty to join?" data-ar="1. هل أحتاج إلى أن أكون عسكرياً نشطاً للانضمام؟">1. Do I need to be active duty to join?</div>
+      <div class="faq-answer" data-en="We accept all active duty soldiers, officers, enlisted and reserve, as well as veterans." data-ar="نقبل جميع الجنود النشطين، الضباط، المجندين، والاحتياطيين، وكذلك المحاربين القدامى.">We accept all active duty soldiers, officers, enlisted and reserve, as well as veterans.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)" data-en="2. Do I need to be Assyrian to join?" data-ar="2. هل يجب أن أكون آشورياً للانضمام؟">2. Do I need to be Assyrian to join?</div>
+      <div class="faq-answer" data-en="Yes, you need to be Assyrian to be a member." data-ar="نعم، يجب أن تكون آشورياً لتكون عضواً.">Yes, you need to be Assyrian to be a member.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)" data-en="3. Is the AMA registered under any government agency?" data-ar="3. هل تم تسجيل AMA تحت أي وكالة حكومية؟">3. Is the AMA registered under any government agency?</div>
+      <div class="faq-answer" data-en="No, the AMA is not registered under any government agency." data-ar="لا، لم يتم تسجيل AMA تحت أي وكالة حكومية.">No, the AMA is not registered under any government agency.</div>
+    </div>
+  </section>
+
+  <section id="join">
+    <h2 data-en="JOIN NOW" data-ar="انضم الآن">JOIN NOW</h2>
+    <div class="join">
+    <form action="https://formspree.io/f/xzzgkgkr" method="POST">
+  <h3 data-en="APPLICATION FORM" data-ar="نموذج التسجيل">APPLICATION FORM</h3>
+
+  <input type="text" name="First Name" placeholder="First name" data-en="First name" data-ar="الاسم الأول" required>
+  <input type="text" name="Last Name" placeholder="Last name" data-en="Last name" data-ar="اسم العائلة" required>
+  <input type="date" name="Date of Birth" id="dob" required>
+  <input type="email" name="Email" placeholder="Your email" data-en="Your email" data-ar="بريدك الإلكتروني" required>
+
+  <div style="display: flex; gap: 10px;">
+    <input type="text" name="Country Code" placeholder="Country Code" data-en="Country Code" data-ar="رمز الدولة" style="flex: 1;" required>
+    <input type="tel" name="Phone Number" placeholder="Phone number" data-en="Phone number" data-ar="رقم الهاتف" style="flex: 3;" required>
+  </div>
+
+  <select name="Messenger App" required>
+    <option value="" disabled selected data-en="Preferred messenger app" data-ar="تطبيق المراسلة المفضل">Preferred messenger app</option>
+    <option data-en="WhatsApp" data-ar="واتساب">WhatsApp</option>
+    <option data-en="Signal" data-ar="سيجنال">Signal</option>
+    <option data-en="Telegram" data-ar="تيليجرام">Telegram</option>
+  </select>
+
+  <textarea name="Military Experience" placeholder="Detail your military experience" data-en="Detail your military experience" data-ar="تفاصيل خبرتك العسكرية" required></textarea>
+
+  <button type="submit" data-en="SUBMIT" data-ar="إرسال">SUBMIT</button>
+</form>
+
+
+      <div class="contact-right">
+        <div class="contact-box">
+          <h3 data-en="CONTACT US" data-ar="اتصل بنا">CONTACT US</h3>
+          <p><strong><span data-en="EMAIL:" data-ar="البريد الإلكتروني:">EMAIL:</span></strong><br>info@assyrianmilitaryassociation.org</p>
+          <p><strong><span data-en="TELEGRAM:" data-ar="تيليجرام:">TELEGRAM:</span></strong><br>t.me/AssyrianMilitaryAssociation</p>
+          <p><strong><span data-en="FACEBOOK:" data-ar="فيسبوك:">FACEBOOK:</span></strong><br>https://www.facebook.com/AssyrianMilitaryAssociation/</p>
+        </div>
+        <div class="bottom-img">
+          <img src="assets/contact-soldiers.jpg" alt="Contact Soldiers Group">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script>
+let isArabic = false;
+
+window.addEventListener('DOMContentLoaded', () => {
+  const dob = document.getElementById('dob');
+  dob.max = new Date().toISOString().split('T')[0];
+
+  const phoneInput = document.querySelector('input[placeholder="Phone number"]');
+  phoneInput.addEventListener('input', function() {
+    this.value = this.value.replace(/[^0-9\s]/g, '');
+  });
+});
+
+function toggleLanguage() {
+  isArabic = !isArabic;
+  document.documentElement.lang = isArabic ? 'ar' : 'en';
+  document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+
+  document.querySelectorAll('[data-en]').forEach(el => {
+    if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+      el.placeholder = isArabic ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+    } else if (el.tagName === "OPTION") {
+      el.textContent = isArabic ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+    } else {
+      el.textContent = isArabic ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+    }
+  });
+
+  document.querySelector('.lang-switcher').textContent = isArabic ? 'EN' : 'AR';
+}
+
+function toggleFaq(element) {
+  const answer = element.nextElementSibling;
+  const isOpen = element.classList.toggle('open');
+  answer.style.display = isOpen ? 'block' : 'none';
+}
+</script>
+</body>
+</html>
