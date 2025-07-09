@@ -5,54 +5,256 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assyrian Military Association</title>
   <link rel="icon" type="image/x-icon" href="assets/assyria.ico">
-  <style>
-    html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: "Segoe UI", Helvetica, Arial, sans-serif; background: #fff; color: #000; font-size: 25px; }
-    header { background: url('assets/AMA.jpg') center/cover no-repeat; height: 100vh; color: white; position: relative; }
-    nav { position: absolute; top: 20px; left: 20px; right: 20px; display: flex; justify-content: space-between; align-items: center; z-index: 2; font-size: 28px; font-weight: 700; flex-wrap: nowrap; }
-    .brand { font-size: 30px; color: white; font-weight: 700; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); }
-    .nav-links { display: flex; gap: 30px; align-items: center; flex-wrap: nowrap; }
-    .nav-links a { color: white; text-decoration: none; transition: color 0.3s ease; font-weight: 700; }
-    .nav-links a:hover { color: #ccc; text-shadow: 0 0 3px rgba(255,255,255,0.5); }
-    .lang-switcher { cursor: pointer; padding: 6px 12px; background: white; color: black; border-radius: 5px; font-size: 20px; }
+<style>
+  html {
+  scroll-behavior: smooth;
+}
 
-    section { padding: 80px 5%; max-width: 1600px; margin: auto; }
-    h2 { border-bottom: 2px solid #000; display: inline-block; margin-bottom: 30px; font-size: 32px; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  font-size: 18px;
+  line-height: 1.6;
+}
 
-    .faq { background: black; color: white; padding: 60px 5%; margin-top: 50px; }
-    .faq-item { margin-bottom: 30px; cursor: pointer; font-size: 22px; }
-    .faq-question { font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
-    .faq-answer { display: none; padding-top: 10px; font-weight: normal; font-size: 20px; }
-    .faq-question::after { content: '+'; font-size: 28px; padding-left: 10px; }
-    .faq-question.open::after { content: '-'; }
+header {
+  background: url('assets/AMA.jpg') center/cover no-repeat;
+  height: 100vh;
+  color: white;
+  position: relative;
+}
 
-    .join { display: flex; gap: 40px; justify-content: space-between; align-items: flex-start; margin-top: 50px; flex-wrap: wrap; }
-    form { display: flex; flex-direction: column; gap: 15px; flex: 1 1 60%; min-width: 350px; }
-    input, select, textarea { padding: 12px; font-size: 18px; }
-    button { padding: 12px; font-size: 18px; background: black; color: white; border: none; cursor: pointer; }
-    button:hover { background: #333; }
+nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 2;
+}
 
-    .contact-right { display: flex; flex-direction: column; gap: 20px; flex: 1 1 35%; min-width: 300px; }
-    .contact-box { background: black; color: white; padding: 25px; }
-    .bottom-img img { width: 100%; height: auto; display: block; }
+.brand {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  max-width: 90%;
+}
 
-    .logos { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; justify-items: center; align-items: center; margin-top: 30px; }
-    .logos img { width: 100%; max-width: 120px; height: auto; }
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
 
-    @media (max-width: 900px) {
-      nav { font-size: 16px; gap: 5px; flex-wrap: nowrap; }
-      .nav-links { gap: 10px; flex-wrap: nowrap; }
-      .nav-links a { font-size: 14px; }
-      .lang-switcher { font-size: 14px; padding: 4px 8px; }
-      .join { flex-direction: column; gap: 30px; }
-      form { width: 100%; min-width: unset; }
-      form input, form select, form textarea, form button { font-size: 16px; width: 100%; box-sizing: border-box; }
-      .logos { grid-template-columns: repeat(2, 1fr); }
-      .logos img:last-child { grid-column: span 2; justify-self: center; }
-      .contact-right { width: 100%; flex: unset; }
-      .contact-box { width: 100%; }
-      .bottom-img img { width: 100%; }
-    }
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #ccc;
+  text-shadow: 0 0 3px rgba(255,255,255,0.5);
+}
+
+.lang-switcher {
+  cursor: pointer;
+  padding: 6px 12px;
+  background: white;
+  color: black;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+section {
+  padding: 60px 5%;
+  max-width: 1600px;
+  margin: auto;
+}
+
+h2 {
+  border-bottom: 2px solid #000;
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.faq {
+  background: black;
+  color: white;
+  padding: 60px 5%;
+  margin-top: 50px;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.faq-question {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 24px;
+  padding-left: 10px;
+}
+
+.faq-question.open::after {
+  content: '-';
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.5s ease, opacity 2s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.faq-question.open + .faq-answer {
+  max-height: 500px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.join {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1 1 60%;
+  min-width: 300px;
+}
+
+input,
+select,
+textarea {
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #333;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1 1 35%;
+  min-width: 280px;
+}
+
+.contact-box {
+  background: black;
+  color: white;
+  padding: 25px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bottom-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.logos img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .brand {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  .lang-switcher {
+    align-self: flex-end;
+    font-size: 14px;
+  }
+
+  .join {
+    flex-direction: column;
+  }
+
+  form,
+  .contact-right {
+    width: 100%;
+    min-width: unset;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .faq-item {
+    font-size: 16px;
+  }
+}
+
   </style>
 </head>
 
@@ -75,7 +277,7 @@
     <p data-en="We exist to bring together Assyrians who are serving and who have served armed forces worldwide. Our Assyrian ancestors were among the first to form a fully professional standing army, and being of such heritage, we Assyrians have no right to a dishonourable action. By honouring the legacy of our Assyrian military history, from past to present, from Tiglath-Pileser III to Agha Petros, we honour ourselves and forge a community of militant zeal that is willing to serve one another as family, and serve our Assyrians as patriots. The Assyrian Military Association is proud to currently have members affiliated with the Nineveh Plain Guard Forces, the British Armed Forces, the Canadian Army, the Australian Defense Force and French Armed Forces. We welcome you to join our community and grow close to your Assyrian brothers in arms, not just for the interests of ourselves, but for the interests of our greater Assyria." data-ar="نحن موجودون لجمع الآشوريين الذين يخدمون والذين خدموا في القوات المسلحة في جميع أنحاء العالم. كان أسلافنا الآشوريون من بين الأوائل الذين شكلوا جيشًا نظاميًا محترفًا بالكامل، وكوننا من هذا التراث، فلا يحق لنا نحن الآشوريين أن نتعرض لعمل مشين. من خلال تكريم إرث تاريخنا العسكري الآشوري، من الماضي إلى الحاضر، من تغلث فلاصر الثالث إلى آغا بطرس، فإننا نكرم أنفسنا ونشكل مجتمعًا من الحماس العسكري المستعد لخدمة بعضهم البعض كعائلة، وخدمة الآشوريين كوطنيين. تفخر الجمعية العسكرية الآشورية بوجود أعضاء حاليًا تابعين لقوات حرس سهل نينوى، والقوات المسلحة البريطانية، والجيش الكندي، وقوات الدفاع الأسترالية، والقوات المسلحة الفرنسية. نرحب بكم للانضمام إلى مجتمعنا والتقارب مع إخوانكم الآشوريين في السلاح، ليس فقط من أجل مصلحتنا، بل من أجل مصلحة بلادنا الكبرى.">We exist to bring together Assyrians who are serving and who have served armed forces worldwide. Our Assyrian ancestors were among the first to form a fully professional standing army, and being of such heritage, we Assyrians have no right to a dishonourable action. By honouring the legacy of our Assyrian military history, from past to present, from Tiglath-Pileser III to Agha Petros, we honour ourselves and forge a community of militant zeal that is willing to serve one another as family, and serve our Assyrians as patriots. The Assyrian Military Association is proud to currently have members affiliated with the Nineveh Plain Guard Forces, the British Armed Forces, the Canadian Army, the Australian Defense Force and French Armed Forces. We welcome you to join our community and grow close to your Assyrian brothers in arms, not just for the interests of ourselves, but for the interests of our greater Assyria.</p>
     <br>
     <div class="logos">
-      <img src="assets/npgf.jpeg" alt="Nineveh Plain Guard Forces">
+      <img src="assets/npgf.png" alt="Nineveh Plain Guard Forces">
       <img src="assets/uk.webp" alt="British Army">
       <img src="assets/canada.png" alt="Canadian Army">
       <img src="assets/australia.png" alt="Australian Defence Force">
@@ -91,11 +293,11 @@
     </div>
     <div class="faq-item">
       <div class="faq-question" onclick="toggleFaq(this)" data-en="2. Do I need to be Assyrian to join?" data-ar="2. هل يجب أن أكون آشورياً للانضمام؟">2. Do I need to be Assyrian to join?</div>
-      <div class="faq-answer" data-en="Yes, you need to be Assyrian to be a member." data-ar="نعم، يجب أن تكون آشورياً لتكون عضواً.">Yes, you need to be Assyrian to be a member.</div>
+      <div class="faq-answer" data-en="Yes, you need to be Assyrian to be a member. That being said, if you are a foreigner and would like to communicate with us, we would be happy to speak to you via email, which can be found in the Join Now section." data-ar="نعم، يجب أن تكون آشورياً لتكون عضواً. مع ذلك، إذا كنت أجنبياً وترغب في التواصل معنا، سنكون سعيدين بمخاطبتك عن طريق البريد الإلكتروني الموجود في قسم انضم إلينا.">Yes, you need to be Assyrian to be a member. That being said, if you are a foreigner and would like to communicate with us, we would be happy to speak to you via email, which can be found in the Join Now section.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question" onclick="toggleFaq(this)" data-en="3. Is the AMA registered under any government agency?" data-ar="3. هل تم تسجيل AMA تحت أي وكالة حكومية؟">3. Is the AMA registered under any government agency?</div>
-      <div class="faq-answer" data-en="No, the AMA is not registered under any government agency." data-ar="لا، لم يتم تسجيل AMA تحت أي وكالة حكومية.">No, the AMA is not registered under any government agency.</div>
+      <div class="faq-answer" data-en="No, the AMA is not registered under any government agency or defence department. This is because the AMA serves to internationally bring Assyrian soldiers and veterans from different militaries together by forging our own community, instead of represnting Assyrian soldiers exclusively under specific military forces." data-ar="لا، لم يتم تسجيل AMA تحت أي وكالة حكومية أو إدارة الدفاع. هذا لأن AMA تسعى لجمع الجنود ومحاربي آشور من مختلف الجيوش دون الانضواء تحت قوات عسكرية مخصصة وفقاً للحكومات.">No, the AMA is not registered under any government agency or defence department. This is because the AMA serves to internationally bring Assyrian soldiers and veterans from different militaries together by forging our own community, instead of represnting Assyrian soldiers exclusively under specific military forces.</div>
     </div>
   </section>
 
@@ -161,10 +363,24 @@ function toggleLanguage() {
 }
 
 function toggleFaq(element) {
-  const answer = element.nextElementSibling;
-  const isOpen = element.classList.toggle('open');
-  answer.style.display = isOpen ? 'block' : 'none';
+  const isOpen = element.classList.contains('open');
+
+  // Close all others (optional, accordion behavior)
+  document.querySelectorAll('.faq-question.open').forEach(q => {
+    if (q !== element) {
+      q.classList.remove('open');
+    }
+  });
+
+  // Toggle the current one
+  if (isOpen) {
+    element.classList.remove('open');
+  } else {
+    element.classList.add('open');
+  }
 }
+
+
 </script>
 
 </body>
