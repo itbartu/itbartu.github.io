@@ -74,15 +74,17 @@ nav {
 
 .nav-links a {
   font-size: 14px;
-  color: white;
+  color: #f0f0f0;
   text-decoration: none;
   font-weight: bold;
   white-space: nowrap;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #ccc;
-  text-shadow: 0 0 3px rgba(255,255,255,0.5);
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.5);
 }
 
 .lang-switcher {
@@ -236,11 +238,7 @@ img {
   width: 100%;
   max-width: 100px;
   height: auto;
-}
-
-.logos img:nth-last-child(1):nth-child(odd) {
-  grid-column: 1 / -1;
-  justify-self: center;
+  display: block;
 }
 
 /* Responsive Styling */
@@ -287,6 +285,16 @@ img {
   }
 }
 
+@media (min-width: 769px) {
+  .brand {
+    font-size: 32px;
+  }
+
+  .nav-links a {
+    font-size: 22px;
+  }
+}
+
   </style>
 </head>
 
@@ -306,7 +314,7 @@ img {
 
   <section id="about">
     <h2 data-en="ABOUT US" data-ar="عنا">ABOUT US</h2>
-    <p data-en="We exist to bring together Assyrians who are serving and who have served armed forces worldwide. Our Assyrian ancestors were among the first to form a fully professional standing army, and being of such heritage, we Assyrians have no right to a dishonourable action. By honouring the legacy of our Assyrian military history, from past to present, from Tiglath-Pileser III to Agha Petros, we honour ourselves and forge a community of militant zeal that is willing to serve one another as family, and serve our Assyrians as patriots. The Assyrian Military Association is proud to currently have members affiliated with the Nineveh Plain Guard Forces, the British Armed Forces, the Canadian Army, the Australian Defense Force and French Armed Forces. We welcome you to join our community and grow close to your Assyrian brothers in arms, not just for the interests of ourselves, but for the interests of our greater Assyria." data-ar="نحن موجودون لجمع الآشوريين الذين يخدمون والذين خدموا في القوات المسلحة في جميع أنحاء العالم. كان أسلافنا الآشوريون من بين الأوائل الذين شكلوا جيشًا نظاميًا محترفًا بالكامل، وكوننا من هذا التراث، فلا يحق لنا نحن الآشوريين أن نتعرض لعمل مشين. من خلال تكريم إرث تاريخنا العسكري الآشوري، من الماضي إلى الحاضر، من تغلث فلاصر الثالث إلى آغا بطرس، فإننا نكرم أنفسنا ونشكل مجتمعًا من الحماس العسكري المستعد لخدمة بعضهم البعض كعائلة، وخدمة الآشوريين كوطنيين. تفخر الجمعية العسكرية الآشورية بوجود أعضاء حاليًا تابعين لقوات حرس سهل نينوى، والقوات المسلحة البريطانية، والجيش الكندي، وقوات الدفاع الأسترالية، والقوات المسلحة الفرنسية. نرحب بكم للانضمام إلى مجتمعنا والتقارب مع إخوانكم الآشوريين في السلاح، ليس فقط من أجل مصلحتنا، بل من أجل مصلحة بلادنا الكبرى.">We exist to bring together Assyrians who are serving and who have served armed forces worldwide. Our Assyrian ancestors were among the first to form a fully professional standing army, and being of such heritage, we Assyrians have no right to a dishonourable action. By honouring the legacy of our Assyrian military history, from past to present, from Tiglath-Pileser III to Agha Petros, we honour ourselves and forge a community of militant zeal that is willing to serve one another as family, and serve our Assyrians as patriots. The Assyrian Military Association is proud to currently have members affiliated with the Nineveh Plain Guard Forces, the British Armed Forces, the Canadian Army, the Australian Defense Force and French Armed Forces. We welcome you to join our community and grow close to your Assyrian brothers in arms, not just for the interests of ourselves, but for the interests of our greater Assyria.</p>
+    <p data-en="We exist to bring together Assyrians who are serving and who have served in armed forces worldwide. Our Assyrian ancestors were among the first to form a fully professional standing army, and being of such heritage, we have no right to a dishonourable action. By honouring the legacy of our Assyrian military history, from past to present, from Tiglath-Pileser III to Agha Petros, we honour ourselves and forge a community of militant zeal that is willing to serve one another as family, and serve our Assyrian nation as patriots. We welcome you to join us and become a member of our international family. We boast a strong and active community, with current members affiliated with the following military forces:" data-ar="نحن موجودون لجمع الآشوريين الذين يخدمون والذين خدموا في القوات المسلحة حول العالم. كان أجدادنا الآشوريون من أوائل من شكلوا جيشًا نظاميًا محترفًا بالكامل، وكوننا من هذا التراث، فلا يحق لنا القيام بعمل مشين. بتكريم إرث تاريخنا العسكري الآشوري، من الماضي إلى الحاضر، من تغلث فلاصر الثالث إلى آغا بطرس، نكرم أنفسنا ونبني مجتمعًا من الحماس العسكري، مستعدًا لخدمة بعضهم البعض كعائلة، وخدمة أمتنا الآشورية كوطنيين. نرحب بكم للانضمام إلينا والانضمام إلى عائلتنا الدولية. نفخر بمجتمعنا القوي والنشط، حيث ينتمي أعضاؤه الحاليون إلى القوات العسكرية التالية:">We exist to bring together Assyrians who are serving and who have served in armed forces worldwide. Our Assyrian ancestors were among the first to form a fully professional standing army, and being of such heritage, we have no right to a dishonourable action. By honouring the legacy of our Assyrian military history, from past to present, from Tiglath-Pileser III to Agha Petros, we honour ourselves and forge a community of militant zeal that is willing to serve one another as family, and serve our Assyrian nation as patriots. We welcome you to join us and become a member of our international family. We boast a strong and active community, with current members affiliated with the following military forces:</p>
     <br>
     <div class="logos">
       <img src="assets/npgf.png" alt="Nineveh Plain Guard Forces">
@@ -325,11 +333,11 @@ img {
     </div>
     <div class="faq-item">
       <div class="faq-question" onclick="toggleFaq(this)" data-en="2. Do I need to be Assyrian to join?" data-ar="2. هل يجب أن أكون آشورياً للانضمام؟">2. Do I need to be Assyrian to join?</div>
-      <div class="faq-answer" data-en="Yes, you need to be Assyrian to be a member. That being said, if you are a foreigner and would like to communicate with us, we would be happy to speak to you via email, which can be found in the Join Now section." data-ar="نعم، يجب أن تكون آشورياً لتكون عضواً. مع ذلك، إذا كنت أجنبياً وترغب في التواصل معنا، سنكون سعيدين بمخاطبتك عن طريق البريد الإلكتروني الموجود في قسم انضم إلينا.">Yes, you need to be Assyrian to be a member. That being said, if you are a foreigner and would like to communicate with us, we would be happy to speak to you via email, which can be found in the Join Now section.</div>
+      <div class="faq-answer" data-en="Yes, you need to be Assyrian to be a member. That being said, if you are a foreigner and would like to communicate with us, we would be happy to speak to you via email, which can be found in the Contact Us section." data-ar="نعم، يشترط أن تكون آشوريًا لتكون عضوًا. مع ذلك، إذا كنت أجنبيًا وترغب بالتواصل معنا، يسعدنا التواصل معك عبر البريد الإلكتروني، والذي يمكنك العثور عليه في قسم اتصل بنا.">Yes, you need to be Assyrian to be a member. That being said, if you are a foreigner and would like to communicate with us, we would be happy to speak to you via email, which can be found in the Contact Us section.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question" onclick="toggleFaq(this)" data-en="3. Is the AMA registered under any government agency?" data-ar="3. هل تم تسجيل AMA تحت أي وكالة حكومية؟">3. Is the AMA registered under any government agency?</div>
-      <div class="faq-answer" data-en="No, the AMA is not registered under any government agency or defence department. This is because the AMA serves to internationally bring Assyrian soldiers and veterans from different militaries together by forging our own community, instead of represnting Assyrian soldiers exclusively under specific military forces." data-ar="لا، لم يتم تسجيل AMA تحت أي وكالة حكومية أو إدارة الدفاع. هذا لأن AMA تسعى لجمع الجنود ومحاربي آشور من مختلف الجيوش دون الانضواء تحت قوات عسكرية مخصصة وفقاً للحكومات.">No, the AMA is not registered under any government agency or defence department. This is because the AMA serves to internationally bring Assyrian soldiers and veterans from different militaries together by forging our own community, instead of represnting Assyrian soldiers exclusively under specific military forces.</div>
+      <div class="faq-answer" data-en="No, the AMA is not registered under any government or defence ministry. This is because the AMA solely exists as an international community of Assyrian soldiers and veterans from different armed forces, rather than an entity that seeks to represent or advocate for Assyrian soldiers within any specific military force." data-ar="لا، المنظمة العسكرية الآشورية ليست مسجلة تحت أي حكومة أو وزارة دفاعية. المنظمة العسكرية الآشورية هي فقط مجتمع دولي لجنود ومخضرمين عسكريين من قوات عسكرية متعددة وليست كيان التي تطالب بتمثيل الجنود الآشوريين في قوة عسكرية معينة.">No, the AMA is not registered under any government or defence ministry. This is because the AMA solely exists as an international community of Assyrian soldiers and veterans from different armed forces, rather than an entity that seeks to represent or advocate for Assyrian soldiers within any specific military force.</div>
     </div>
   </section>
 
@@ -341,7 +349,7 @@ img {
 
       <input type="text" name="First Name" placeholder="First name" data-en="First name" data-ar="الاسم الأول" required>
       <input type="text" name="Last Name" placeholder="Last name" data-en="Last name" data-ar="اسم العائلة" required>
-      <input type="date" name="Date of Birth" id="dob" placeholder="Date of Birth" required>
+      <input type="text" name="Date of Birth" id="dob" placeholder="Date of Birth" onfocus="(this.type='date')" onblur="if(this.value===''){this.type='text'}" required>
       <input type="email" name="Email" placeholder="Your email" data-en="Your email" data-ar="بريدك الإلكتروني" required>
       <input type="tel" name="Phone Number" placeholder="Phone number (include country code)" data-en="Phone number (include country code)" data-ar="رقم الهاتف (مع رمز الدولة)" required oninput="this.value = this.value.replace(/[^0-9+ ]/g, '')">
       <select name="Messenger App" required>
