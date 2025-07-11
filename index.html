@@ -52,13 +52,12 @@ nav {
 }
 
 .brand {
-  font-size: 20px;
+  font-size: clamp(1.4rem, 4vw, 2.4rem);
   font-weight: 700;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
   color: white;
-  flex: 1 1 100%;
-  text-align: center;
-  margin-top: 20px;
+  margin: 0;
+  line-height: 1.1;
 }
 
 .nav-links {
@@ -227,18 +226,47 @@ img {
 
 .logos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 20px;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 40px;
+  justify-content: center;
   align-items: center;
   margin-top: 30px;
+  padding: 0 10px;
 }
 
 .logos img {
-  width: 100%;
   max-width: 100px;
   height: auto;
   display: block;
+  margin: 0 auto;
+}
+
+.brand-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1 1 100%;
+  margin-top: 0;
+  padding-top: 0;
+  gap: 4px; /* tighter spacing between the two lines */
+}
+
+.assyrian-brand {
+  font-family: 'AssyrianFont', serif;
+  font-size: clamp(1.4rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  line-height: 1.1;
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'AssyrianFont';
+  src: url('assets/fonts/SyrCOMAdiabene.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Responsive Styling */
@@ -283,6 +311,21 @@ img {
   .faq-item {
     font-size: 16px;
   }
+
+  .assyrian-brand {
+    font-size: 6vw;
+  }
+  .logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 10px;
+  }
+
+  .logos img {
+    flex: 0 1 100px;
+  }
 }
 
 @media (min-width: 769px) {
@@ -302,7 +345,10 @@ img {
 
 <header>
   <nav>
-    <div class="brand">ASSYRIAN MILITARY ASSOCIATION</div>
+    <div class="brand-container">
+      <div class="assyrian-brand">ܫܘܬܦܘܬܐ ܦܠܚܝܬܐ ܐܬܘܪܝܬܐ</div>
+      <div class="brand">ASSYRIAN MILITARY ASSOCIATION</div>
+    </div>
     <div class="nav-links">
       <a href="#about" data-en="ABOUT US" data-ar="عنا">ABOUT US</a>
       <a href="#faq" data-en="FAQ" data-ar="أسئلة متكررة">FAQ</a>
@@ -346,7 +392,6 @@ img {
   <div class="join">
     <form action="https://formspree.io/f/xzzgkgkr" method="POST">
       <h3 data-en="APPLICATION FORM" data-ar="نموذج التسجيل">APPLICATION FORM</h3>
-
       <input type="text" name="First Name" placeholder="First name" data-en="First name" data-ar="الاسم الأول" required>
       <input type="text" name="Last Name" placeholder="Last name" data-en="Last name" data-ar="اسم العائلة" required>
       <input type="text" name="Date of Birth" id="dob" placeholder="Date of Birth" onfocus="(this.type='date')" onblur="if(this.value===''){this.type='text'}" required>
